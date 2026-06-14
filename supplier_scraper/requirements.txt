@@ -1,0 +1,7 @@
+# supplier_scraper dependencies.
+# Note: no `playwright install` needed - we connect to Bright Data's REMOTE
+# browser over CDP, so no local browser binary is downloaded.
+playwright>=1.44
+google-genai>=0.3
+httpx>=0.27
+# python-dotenv is optional (used if present to load .env).

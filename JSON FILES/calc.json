@@ -1,0 +1,1076 @@
+[
+    {
+        "asin": "B0D6VLH7F6",
+        "price": 27.43,
+        "fees": 11.6,
+        "cost": 9.0,
+        "profit": 6.83
+    },
+    {
+        "asin": "B0C6CRTM2T",
+        "price": 21.69,
+        "fees": 3.25,
+        "cost": 10.0,
+        "profit": 8.44
+    },
+    {
+        "asin": "B0BMXZ35BW",
+        "price": 4.789999999999999,
+        "fees": 0.72,
+        "cost": 4.0,
+        "profit": 0.07
+    },
+    {
+        "asin": "B0BDMBN8KW",
+        "price": 56.7,
+        "fees": 8.51,
+        "cost": 39.0,
+        "profit": 9.19
+    },
+    {
+        "asin": "B09R98TC17",
+        "price": 30.990000000000002,
+        "fees": 5.27,
+        "cost": 18.0,
+        "profit": 7.72
+    },
+    {
+        "asin": "B09MV3TQFN",
+        "price": 7.3100000000000005,
+        "fees": 0.58,
+        "cost": 4.0,
+        "profit": 2.73
+    },
+    {
+        "asin": "B07GT8RN6Z",
+        "price": 20.95,
+        "fees": 2.51,
+        "cost": 9.0,
+        "profit": 9.44
+    },
+    {
+        "asin": "B072K2KB9P",
+        "price": 9.49,
+        "fees": 0.76,
+        "cost": 4.0,
+        "profit": 4.73
+    },
+    {
+        "asin": "B01M1CEC80",
+        "price": 10.96,
+        "fees": 1.64,
+        "cost": 5.0,
+        "profit": 4.32
+    },
+    {
+        "asin": "B01CDPIGU0",
+        "price": 35.99,
+        "fees": 10.34,
+        "cost": 15.0,
+        "profit": 10.65
+    },
+    {
+        "asin": "B01BINOH74",
+        "price": 16.99,
+        "fees": 2.55,
+        "cost": 7.0,
+        "profit": 7.44
+    },
+    {
+        "asin": "B00SELB9W0",
+        "price": 9.99,
+        "fees": 1.2,
+        "cost": 4.0,
+        "profit": 4.79
+    },
+    {
+        "asin": "B0089NNH1Y",
+        "price": 22.98,
+        "fees": 3.45,
+        "cost": 12.0,
+        "profit": 7.53
+    },
+    {
+        "asin": "B003RL9VRM",
+        "price": 4.99,
+        "fees": 0.75,
+        "cost": 4.0,
+        "profit": 0.24
+    },
+    {
+        "asin": "B0013U3CME",
+        "price": 4.470000000000001,
+        "fees": 0.36,
+        "cost": 3.0,
+        "profit": 1.11
+    },
+    {
+        "asin": "B00AP6ZJN2",
+        "price": 8.68,
+        "fees": 0.69,
+        "cost": 5.0,
+        "profit": 2.99
+    },
+    {
+        "asin": "B08T7MKXMM",
+        "price": 10.63,
+        "fees": 1.59,
+        "cost": 5.0,
+        "profit": 4.04
+    },
+    {
+        "asin": "B0C4814M8G",
+        "price": 19.87,
+        "fees": 2.98,
+        "cost": 7.0,
+        "profit": 9.89
+    },
+    {
+        "asin": "B0C5QBGWX9",
+        "price": 183.59,
+        "fees": 27.54,
+        "cost": 90.0,
+        "profit": 66.05
+    },
+    {
+        "asin": "B096FF3L3W",
+        "price": 310.72,
+        "fees": 46.61,
+        "cost": 75.0,
+        "profit": 189.11
+    },
+    {
+        "asin": "B0D54JZTHY",
+        "price": 72.74,
+        "fees": 5.82,
+        "cost": 66.0,
+        "profit": 0.92
+    },
+    {
+        "asin": "B07FLS422H",
+        "price": 182.49,
+        "fees": 27.37,
+        "cost": 75.0,
+        "profit": 80.12
+    },
+    {
+        "asin": "B005BIJESA",
+        "price": 155.0,
+        "fees": 23.25,
+        "cost": 68.0,
+        "profit": 63.75
+    },
+    {
+        "asin": "B0CN36FS88",
+        "price": 94.52,
+        "fees": 14.18,
+        "cost": 60.0,
+        "profit": 20.34
+    },
+    {
+        "asin": "B0CN35NQJV",
+        "price": 84.9,
+        "fees": 12.74,
+        "cost": 60.0,
+        "profit": 12.16
+    },
+    {
+        "asin": "B0CN33KKDL",
+        "price": 98.0,
+        "fees": 14.7,
+        "cost": 60.0,
+        "profit": 23.3
+    },
+    {
+        "asin": "B0CM22B7HS",
+        "price": 84.9,
+        "fees": 12.74,
+        "cost": 60.0,
+        "profit": 12.16
+    },
+    {
+        "asin": "B086MXDHZT",
+        "price": 542.58,
+        "fees": 81.39,
+        "cost": 98.0,
+        "profit": 363.19
+    },
+    {
+        "asin": "B0C5QSN9YB",
+        "price": 5.24,
+        "fees": 4.68,
+        "cost": 35.0,
+        "profit": -34.44
+    },
+    {
+        "asin": "B0DLH11KV9",
+        "price": 90.0,
+        "fees": 13.5,
+        "cost": 60.0,
+        "profit": 16.5
+    },
+    {
+        "asin": "B07ZB2DFMB",
+        "price": 49.99,
+        "fees": 27.16,
+        "cost": 27.0,
+        "profit": -4.17
+    },
+    {
+        "asin": "B0D5BNX474",
+        "price": 1010.0,
+        "fees": 80.8,
+        "cost": 700.0,
+        "profit": 229.2
+    },
+    {
+        "asin": "B0DP5FTZFD",
+        "price": 459.46,
+        "fees": 36.76,
+        "cost": 210.0,
+        "profit": 212.7
+    },
+    {
+        "asin": "B09VXXKK7M",
+        "price": 114.08,
+        "fees": 13.69,
+        "cost": 75.0,
+        "profit": 25.39
+    },
+    {
+        "asin": "B09ZLRCH1H",
+        "price": 238.91,
+        "fees": 25.84,
+        "cost": 220.0,
+        "profit": -6.93
+    }
+]
+{
+    "B0CN7F3KCG": {
+        "restrictions": []
+    },
+    "B0CN7F4PY7": {
+        "restrictions": []
+    },
+    "B0CN7B2VWN": {
+        "restrictions": []
+    },
+    "B0CY5JZNX2": {
+        "restrictions": []
+    },
+    "B07G1Z9Y9S": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "APPROVAL_REQUIRED",
+                        "message": "You need approval to list in this brand.",
+                        "links": [
+                            {
+                                "resource": "https://sellercentral.amazon.com/hz/approvalrequest/restrictions/approve?asin=B07G1Z9Y9S",
+                                "verb": "GET",
+                                "title": "Request Approval via Seller Central.",
+                                "type": "text/html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "B0BLFGLWFK": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "APPROVAL_REQUIRED",
+                        "message": "You need approval to list in this brand.",
+                        "links": [
+                            {
+                                "resource": "https://sellercentral.amazon.com/hz/approvalrequest/restrictions/approve?asin=B0BLFGLWFK",
+                                "verb": "GET",
+                                "title": "Request Approval via Seller Central.",
+                                "type": "text/html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "B0B69JZ94L": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "APPROVAL_REQUIRED",
+                        "message": "You need approval to list in this brand.",
+                        "links": [
+                            {
+                                "resource": "https://sellercentral.amazon.com/hz/approvalrequest/restrictions/approve?asin=B0B69JZ94L",
+                                "verb": "GET",
+                                "title": "Request Approval via Seller Central.",
+                                "type": "text/html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "10317580": {
+        "errors": [
+            {
+                "code": "InvalidInput",
+                "message": "Invalid 'asin' provided.",
+                "details": ""
+            }
+        ]
+    },
+    "B0F9XXMG1S": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "NOT_ELIGIBLE",
+                        "message": "This product has other listing limitations.",
+                        "links": []
+                    },
+                    {
+                        "reasonCode": "NOT_ELIGIBLE",
+                        "message": "You need approval to list this product.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "1225656844": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "reasons": [
+                    {
+                        "reasonCode": "ASIN_NOT_FOUND",
+                        "message": "ASIN does not exist in this marketplace.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "B0DPQR61DF": {
+        "restrictions": []
+    },
+    "1656593353": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "reasons": [
+                    {
+                        "reasonCode": "ASIN_NOT_FOUND",
+                        "message": "ASIN does not exist in this marketplace.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "B00006IF8U": {
+        "restrictions": []
+    },
+    "B09DDGK1XQ": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "APPROVAL_REQUIRED",
+                        "message": "You need approval to list in this brand.",
+                        "links": [
+                            {
+                                "resource": "https://sellercentral.amazon.com/hz/approvalrequest/restrictions/approve?asin=B09DDGK1XQ",
+                                "verb": "GET",
+                                "title": "Request Approval via Seller Central.",
+                                "type": "text/html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "B002KH0YDY": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "APPROVAL_REQUIRED",
+                        "message": "You need approval to list in this brand.",
+                        "links": [
+                            {
+                                "resource": "https://sellercentral.amazon.com/hz/approvalrequest/restrictions/approve?asin=B002KH0YDY",
+                                "verb": "GET",
+                                "title": "Request Approval via Seller Central.",
+                                "type": "text/html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "3536260967": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "reasons": [
+                    {
+                        "reasonCode": "ASIN_NOT_FOUND",
+                        "message": "ASIN does not exist in this marketplace.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "5346807557": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "reasons": [
+                    {
+                        "reasonCode": "ASIN_NOT_FOUND",
+                        "message": "ASIN does not exist in this marketplace.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "1510860359": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "reasons": [
+                    {
+                        "reasonCode": "ASIN_NOT_FOUND",
+                        "message": "ASIN does not exist in this marketplace.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "B0FGY5ZBX9": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "APPROVAL_REQUIRED",
+                        "message": "To sell Pesticides and Pesticide Devices on Amazon.com, you must be a resident of the USA and complete an eLearning and related test. For more information, please refer to our Pesticides and Pesticide Devices policy: https://sellercentral.amazon.com/gp/help/G202115120",
+                        "links": [
+                            {
+                                "resource": "https://sellercentral.amazon.com/hz/approvalrequest/restrictions/approve?asin=B0FGY5ZBX9",
+                                "verb": "GET",
+                                "title": "Request Approval via Seller Central.",
+                                "type": "text/html"
+                            }
+                        ]
+                    },
+                    {
+                        "reasonCode": "APPROVAL_REQUIRED",
+                        "message": "You need approval to list in this brand.",
+                        "links": [
+                            {
+                                "resource": "https://sellercentral.amazon.com/hz/approvalrequest/restrictions/approve?asin=B0FGY5ZBX9",
+                                "verb": "GET",
+                                "title": "Request Approval via Seller Central.",
+                                "type": "text/html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "B0CQKNYP2H": {
+        "restrictions": []
+    },
+    "B09TG3XX4L": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "NOT_ELIGIBLE",
+                        "message": "You are not approved to list this product. You will need to contact the brand owner to become an authorized seller of this product on Amazon.",
+                        "links": []
+                    },
+                    {
+                        "reasonCode": "NOT_ELIGIBLE",
+                        "message": "You need approval to list in this brand.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "B0CZM7JKTS": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "APPROVAL_REQUIRED",
+                        "message": "You need approval to list in this brand.",
+                        "links": [
+                            {
+                                "resource": "https://sellercentral.amazon.com/hz/approvalrequest/restrictions/approve?asin=B0CZM7JKTS",
+                                "verb": "GET",
+                                "title": "Request Approval via Seller Central.",
+                                "type": "text/html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "B0F66YTT8R": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "NOT_ELIGIBLE",
+                        "message": "You need approval to list this product.",
+                        "links": []
+                    },
+                    {
+                        "reasonCode": "NOT_ELIGIBLE",
+                        "message": "You are not approved to list this brand and we are currently not accepting applications.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "B0CL2GTKG6": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "APPROVAL_REQUIRED",
+                        "message": "You need approval to list in this brand.",
+                        "links": [
+                            {
+                                "resource": "https://sellercentral.amazon.com/hz/approvalrequest/restrictions/approve?asin=B0CL2GTKG6",
+                                "verb": "GET",
+                                "title": "Request Approval via Seller Central.",
+                                "type": "text/html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "B0B99HJGPZ": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "NOT_ELIGIBLE",
+                        "message": "You are not approved to list this brand and we are currently not accepting applications.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "B002RSFOYU": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "APPROVAL_REQUIRED",
+                        "message": "You need approval to list in this brand.",
+                        "links": [
+                            {
+                                "resource": "https://sellercentral.amazon.com/hz/approvalrequest/restrictions/approve?asin=B002RSFOYU",
+                                "verb": "GET",
+                                "title": "Request Approval via Seller Central.",
+                                "type": "text/html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "B0CKTQJGYK": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "NOT_ELIGIBLE",
+                        "message": "You are not approved to list this brand and we are currently not accepting applications.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "B00Y528JH0": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "APPROVAL_REQUIRED",
+                        "message": "You need approval to list in this brand.",
+                        "links": [
+                            {
+                                "resource": "https://sellercentral.amazon.com/hz/approvalrequest/restrictions/approve?asin=B00Y528JH0",
+                                "verb": "GET",
+                                "title": "Request Approval via Seller Central.",
+                                "type": "text/html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "B08YJ3HNN7": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "NOT_ELIGIBLE",
+                        "message": "We are currently not accepting applications for this product. To maintain a safe and trustworthy shopping experience, we restrict certain products from being listed or sold on Amazon. If the ability to list this product changes, you will be able to sell by clicking \u201cSell this product\u201d or \u201cApply to Sell\u201d.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "B09Q3MMQ6P": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "APPROVAL_REQUIRED",
+                        "message": "You need approval to list in this brand.",
+                        "links": [
+                            {
+                                "resource": "https://sellercentral.amazon.com/hz/approvalrequest/restrictions/approve?asin=B09Q3MMQ6P",
+                                "verb": "GET",
+                                "title": "Request Approval via Seller Central.",
+                                "type": "text/html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "15880417423": {
+        "errors": [
+            {
+                "code": "InvalidInput",
+                "message": "Invalid 'asin' provided.",
+                "details": ""
+            }
+        ]
+    },
+    "5164703816": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "reasons": [
+                    {
+                        "reasonCode": "ASIN_NOT_FOUND",
+                        "message": "ASIN does not exist in this marketplace.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "B07NWD6S3F": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "NOT_ELIGIBLE",
+                        "message": "You are not approved to list this brand and we are currently not accepting applications.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "12158219": {
+        "errors": [
+            {
+                "code": "InvalidInput",
+                "message": "Invalid 'asin' provided.",
+                "details": ""
+            }
+        ]
+    },
+    "394990711": {
+        "errors": [
+            {
+                "code": "InvalidInput",
+                "message": "Invalid 'asin' provided.",
+                "details": ""
+            }
+        ]
+    },
+    "5419854889": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "reasons": [
+                    {
+                        "reasonCode": "ASIN_NOT_FOUND",
+                        "message": "ASIN does not exist in this marketplace.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "20512706": {
+        "errors": [
+            {
+                "code": "InvalidInput",
+                "message": "Invalid 'asin' provided.",
+                "details": ""
+            }
+        ]
+    },
+    "B07HRBR5MZ": {
+        "restrictions": []
+    },
+    "B009XTZ0XQ": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "APPROVAL_REQUIRED",
+                        "message": "You need approval to list in this brand.",
+                        "links": [
+                            {
+                                "resource": "https://sellercentral.amazon.com/hz/approvalrequest/restrictions/approve?asin=B009XTZ0XQ",
+                                "verb": "GET",
+                                "title": "Request Approval via Seller Central.",
+                                "type": "text/html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "B0DS24M8FX": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "NOT_ELIGIBLE",
+                        "message": "This product has other listing limitations.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "1816261327": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "reasons": [
+                    {
+                        "reasonCode": "ASIN_NOT_FOUND",
+                        "message": "ASIN does not exist in this marketplace.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "B074WYM8F2": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "APPROVAL_REQUIRED",
+                        "message": "You need approval to list in this brand.",
+                        "links": [
+                            {
+                                "resource": "https://sellercentral.amazon.com/hz/approvalrequest/restrictions/approve?asin=B074WYM8F2",
+                                "verb": "GET",
+                                "title": "Request Approval via Seller Central.",
+                                "type": "text/html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "B002K6A7CI": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "APPROVAL_REQUIRED",
+                        "message": "You need approval to list in this brand.",
+                        "links": [
+                            {
+                                "resource": "https://sellercentral.amazon.com/hz/approvalrequest/restrictions/approve?asin=B002K6A7CI",
+                                "verb": "GET",
+                                "title": "Request Approval via Seller Central.",
+                                "type": "text/html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "B09TQQVNJS": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "NOT_ELIGIBLE",
+                        "message": "You are not approved to list this brand and we are currently not accepting applications.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "B0GFCBWSCG": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "NOT_ELIGIBLE",
+                        "message": "You are not approved to list this brand and we are currently not accepting applications.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "15173602222": {
+        "errors": [
+            {
+                "code": "InvalidInput",
+                "message": "Invalid 'asin' provided.",
+                "details": ""
+            }
+        ]
+    },
+    "B004SISTC6": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "APPROVAL_REQUIRED",
+                        "message": "You need approval to list in this brand.",
+                        "links": [
+                            {
+                                "resource": "https://sellercentral.amazon.com/hz/approvalrequest/restrictions/approve?asin=B004SISTC6",
+                                "verb": "GET",
+                                "title": "Request Approval via Seller Central.",
+                                "type": "text/html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "B0DSY137KK": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "NOT_ELIGIBLE",
+                        "message": "This product has other listing limitations.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "B00EDKGRDC": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "APPROVAL_REQUIRED",
+                        "message": "You need approval to list in this brand.",
+                        "links": [
+                            {
+                                "resource": "https://sellercentral.amazon.com/hz/approvalrequest/restrictions/approve?asin=B00EDKGRDC",
+                                "verb": "GET",
+                                "title": "Request Approval via Seller Central.",
+                                "type": "text/html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "B09982CL8W": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "APPROVAL_REQUIRED",
+                        "message": "You need approval to list in this brand.",
+                        "links": [
+                            {
+                                "resource": "https://sellercentral.amazon.com/hz/approvalrequest/restrictions/approve?asin=B09982CL8W",
+                                "verb": "GET",
+                                "title": "Request Approval via Seller Central.",
+                                "type": "text/html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "B0DBVQ2DTH": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "APPROVAL_REQUIRED",
+                        "message": "You need approval to list in this brand.",
+                        "links": [
+                            {
+                                "resource": "https://sellercentral.amazon.com/hz/approvalrequest/restrictions/approve?asin=B0DBVQ2DTH",
+                                "verb": "GET",
+                                "title": "Request Approval via Seller Central.",
+                                "type": "text/html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "B09RPZNSKH": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "APPROVAL_REQUIRED",
+                        "message": "You need approval to list in this brand.",
+                        "links": [
+                            {
+                                "resource": "https://sellercentral.amazon.com/hz/approvalrequest/restrictions/approve?asin=B09RPZNSKH",
+                                "verb": "GET",
+                                "title": "Request Approval via Seller Central.",
+                                "type": "text/html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "B07PGQWZ8G": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "NOT_ELIGIBLE",
+                        "message": "You are not approved to list this brand and we are currently not accepting applications.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "15954118527": {
+        "errors": [
+            {
+                "code": "InvalidInput",
+                "message": "Invalid 'asin' provided.",
+                "details": ""
+            }
+        ]
+    },
+    "B00283OCOM": {
+        "restrictions": []
+    }
+}

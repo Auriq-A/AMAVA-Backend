@@ -1,0 +1,400 @@
+{
+  "payload": {
+    "ASIN": "B006RIRAL6",
+    "status": "Success",
+    "ItemCondition": "New",
+    "Identifier": {
+      "MarketplaceId": "ATVPDKIKX0DER",
+      "ItemCondition": "New",
+      "ASIN": "B006RIRAL6"
+    },
+    "Summary": {
+      "LowestPrices": [
+        {
+          "condition": "new",
+          "fulfillmentChannel": "Amazon",
+          "LandedPrice": {
+            "CurrencyCode": "USD",
+            "Amount": 44.86
+          },
+          "ListingPrice": {
+            "CurrencyCode": "USD",
+            "Amount": 44.86
+          },
+          "Shipping": {
+            "CurrencyCode": "USD",
+            "Amount": 0.0
+          }
+        },
+        {
+          "condition": "new",
+          "fulfillmentChannel": "Merchant",
+          "LandedPrice": {
+            "CurrencyCode": "USD",
+            "Amount": 47.0
+          },
+          "ListingPrice": {
+            "CurrencyCode": "USD",
+            "Amount": 47.0
+          },
+          "Shipping": {
+            "CurrencyCode": "USD",
+            "Amount": 0.0
+          }
+        }
+      ],
+      "BuyBoxPrices": [
+        {
+          "condition": "New",
+          "LandedPrice": {
+            "CurrencyCode": "USD",
+            "Amount": 44.86
+          },
+          "ListingPrice": {
+            "CurrencyCode": "USD",
+            "Amount": 44.86
+          },
+          "Shipping": {
+            "CurrencyCode": "USD",
+            "Amount": 0.0
+          }
+        }
+      ],
+      "NumberOfOffers": [
+        {
+          "condition": "new",
+          "fulfillmentChannel": "Amazon",
+          "OfferCount": 1
+        },
+        {
+          "condition": "new",
+          "fulfillmentChannel": "Merchant",
+          "OfferCount": 8
+        }
+      ],
+      "BuyBoxEligibleOffers": [
+        {
+          "condition": "new",
+          "fulfillmentChannel": "Amazon",
+          "OfferCount": 1
+        },
+        {
+          "condition": "new",
+          "fulfillmentChannel": "Merchant",
+          "OfferCount": 7
+        }
+      ],
+      "SalesRankings": [
+        {
+          "ProductCategoryId": "home_garden_display_on_website",
+          "Rank": 53982
+        },
+        {
+          "ProductCategoryId": "3734151",
+          "Rank": 17
+        }
+      ],
+      "ListPrice": {
+        "CurrencyCode": "USD",
+        "Amount": 51.0
+      },
+      "CompetitivePriceThreshold": {
+        "CurrencyCode": "USD",
+        "Amount": 44.86
+      },
+      "SuggestedLowerPricePlusShipping": {
+        "CurrencyCode": "USD",
+        "Amount": 41.99
+      },
+      "TotalOfferCount": 9
+    },
+    "Offers": [
+      {
+        "Shipping": {
+          "CurrencyCode": "USD",
+          "Amount": 0.0
+        },
+        "ListingPrice": {
+          "CurrencyCode": "USD",
+          "Amount": 44.86
+        },
+        "ShippingTime": {
+          "maximumHours": 0,
+          "minimumHours": 0,
+          "availableDate": "2025-11-23T07:00:00Z",
+          "availabilityType": "FUTURE_WITH_DATE"
+        },
+        "SellerFeedbackRating": {
+          "FeedbackCount": 384,
+          "SellerPositiveFeedbackRating": 91.0
+        },
+        "PrimeInformation": {
+          "IsPrime": true,
+          "IsNationalPrime": true
+        },
+        "SubCondition": "new",
+        "SellerId": "A2R2RITDJNW1Q6",
+        "IsFeaturedMerchant": true,
+        "IsBuyBoxWinner": true,
+        "IsFulfilledByAmazon": true
+      },
+      {
+        "Shipping": {
+          "CurrencyCode": "USD",
+          "Amount": 0.0
+        },
+        "ListingPrice": {
+          "CurrencyCode": "USD",
+          "Amount": 47.0
+        },
+        "ShippingTime": {
+          "maximumHours": 96,
+          "minimumHours": 72,
+          "availabilityType": "NOW"
+        },
+        "SellerFeedbackRating": {
+          "FeedbackCount": 31,
+          "SellerPositiveFeedbackRating": 77.0
+        },
+        "ShipsFrom": {
+          "State": "FL",
+          "Country": "US"
+        },
+        "PrimeInformation": {
+          "IsPrime": false,
+          "IsNationalPrime": false
+        },
+        "SubCondition": "new",
+        "SellerId": "AY72RVKRWKD68",
+        "IsFeaturedMerchant": true,
+        "IsBuyBoxWinner": false,
+        "IsFulfilledByAmazon": false
+      },
+      {
+        "Shipping": {
+          "CurrencyCode": "USD",
+          "Amount": 0.0
+        },
+        "ListingPrice": {
+          "CurrencyCode": "USD",
+          "Amount": 53.22
+        },
+        "ShippingTime": {
+          "maximumHours": 48,
+          "minimumHours": 24,
+          "availabilityType": "NOW"
+        },
+        "SellerFeedbackRating": {
+          "FeedbackCount": 67759,
+          "SellerPositiveFeedbackRating": 78.0
+        },
+        "ShipsFrom": {
+          "State": "IL",
+          "Country": "US"
+        },
+        "PrimeInformation": {
+          "IsPrime": false,
+          "IsNationalPrime": false
+        },
+        "SubCondition": "new",
+        "SellerId": "A2G88111572J8M",
+        "IsFeaturedMerchant": true,
+        "IsBuyBoxWinner": false,
+        "IsFulfilledByAmazon": false
+      },
+      {
+        "Shipping": {
+          "CurrencyCode": "USD",
+          "Amount": 0.0
+        },
+        "ListingPrice": {
+          "CurrencyCode": "USD",
+          "Amount": 53.22
+        },
+        "ShippingTime": {
+          "maximumHours": 48,
+          "minimumHours": 24,
+          "availabilityType": "NOW"
+        },
+        "SellerFeedbackRating": {
+          "FeedbackCount": 67759,
+          "SellerPositiveFeedbackRating": 78.0
+        },
+        "ShipsFrom": {
+          "State": "IL",
+          "Country": "US"
+        },
+        "PrimeInformation": {
+          "IsPrime": false,
+          "IsNationalPrime": false
+        },
+        "SubCondition": "new",
+        "SellerId": "A2G88111572J8M",
+        "IsFeaturedMerchant": true,
+        "IsBuyBoxWinner": false,
+        "IsFulfilledByAmazon": false
+      },
+      {
+        "Shipping": {
+          "CurrencyCode": "USD",
+          "Amount": 0.0
+        },
+        "ListingPrice": {
+          "CurrencyCode": "USD",
+          "Amount": 53.22
+        },
+        "ShippingTime": {
+          "maximumHours": 48,
+          "minimumHours": 24,
+          "availabilityType": "NOW"
+        },
+        "SellerFeedbackRating": {
+          "FeedbackCount": 67759,
+          "SellerPositiveFeedbackRating": 78.0
+        },
+        "ShipsFrom": {
+          "State": "IL",
+          "Country": "US"
+        },
+        "PrimeInformation": {
+          "IsPrime": false,
+          "IsNationalPrime": false
+        },
+        "SubCondition": "new",
+        "SellerId": "A2G88111572J8M",
+        "IsFeaturedMerchant": true,
+        "IsBuyBoxWinner": false,
+        "IsFulfilledByAmazon": false
+      },
+      {
+        "Shipping": {
+          "CurrencyCode": "USD",
+          "Amount": 0.0
+        },
+        "ListingPrice": {
+          "CurrencyCode": "USD",
+          "Amount": 53.22
+        },
+        "ShippingTime": {
+          "maximumHours": 48,
+          "minimumHours": 24,
+          "availabilityType": "NOW"
+        },
+        "SellerFeedbackRating": {
+          "FeedbackCount": 67759,
+          "SellerPositiveFeedbackRating": 78.0
+        },
+        "ShipsFrom": {
+          "State": "IL",
+          "Country": "US"
+        },
+        "PrimeInformation": {
+          "IsPrime": false,
+          "IsNationalPrime": false
+        },
+        "SubCondition": "new",
+        "SellerId": "A2G88111572J8M",
+        "IsFeaturedMerchant": true,
+        "IsBuyBoxWinner": false,
+        "IsFulfilledByAmazon": false
+      },
+      {
+        "Shipping": {
+          "CurrencyCode": "USD",
+          "Amount": 0.0
+        },
+        "ListingPrice": {
+          "CurrencyCode": "USD",
+          "Amount": 53.22
+        },
+        "ShippingTime": {
+          "maximumHours": 48,
+          "minimumHours": 24,
+          "availabilityType": "NOW"
+        },
+        "SellerFeedbackRating": {
+          "FeedbackCount": 67759,
+          "SellerPositiveFeedbackRating": 78.0
+        },
+        "ShipsFrom": {
+          "State": "IL",
+          "Country": "US"
+        },
+        "PrimeInformation": {
+          "IsPrime": false,
+          "IsNationalPrime": false
+        },
+        "SubCondition": "new",
+        "SellerId": "A2G88111572J8M",
+        "IsFeaturedMerchant": true,
+        "IsBuyBoxWinner": false,
+        "IsFulfilledByAmazon": false
+      },
+      {
+        "Shipping": {
+          "CurrencyCode": "USD",
+          "Amount": 0.0
+        },
+        "ListingPrice": {
+          "CurrencyCode": "USD",
+          "Amount": 54.43
+        },
+        "ShippingTime": {
+          "maximumHours": 96,
+          "minimumHours": 72,
+          "availabilityType": "NOW"
+        },
+        "SellerFeedbackRating": {
+          "FeedbackCount": 120,
+          "SellerPositiveFeedbackRating": 54.0
+        },
+        "ShipsFrom": {
+          "State": "GA",
+          "Country": "US"
+        },
+        "PrimeInformation": {
+          "IsPrime": false,
+          "IsNationalPrime": false
+        },
+        "SubCondition": "new",
+        "SellerId": "A24RAZOBLFG144",
+        "IsFeaturedMerchant": true,
+        "IsBuyBoxWinner": false,
+        "IsFulfilledByAmazon": false
+      },
+      {
+        "Shipping": {
+          "CurrencyCode": "USD",
+          "Amount": 0.0
+        },
+        "ListingPrice": {
+          "CurrencyCode": "USD",
+          "Amount": 54.43
+        },
+        "ShippingTime": {
+          "maximumHours": 72,
+          "minimumHours": 48,
+          "availabilityType": "NOW"
+        },
+        "SellerFeedbackRating": {
+          "FeedbackCount": 51,
+          "SellerPositiveFeedbackRating": 48.0
+        },
+        "ShipsFrom": {
+          "State": "MI",
+          "Country": "US"
+        },
+        "PrimeInformation": {
+          "IsPrime": false,
+          "IsNationalPrime": false
+        },
+        "SubCondition": "new",
+        "SellerId": "A1OGC6CQ9SBSC2",
+        "IsFeaturedMerchant": false,
+        "IsBuyBoxWinner": false,
+        "IsFulfilledByAmazon": false
+      }
+    ],
+    "marketplaceId": "ATVPDKIKX0DER"
+  }
+}

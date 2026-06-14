@@ -1,0 +1,877 @@
+[
+    {
+        "asin": "B0D9P3TT1W",
+        "price": 140.0,
+        "fees": 18.2,
+        "cost": 88.88,
+        "profit": 32.92
+    },
+    {
+        "asin": "B0DNHSWBCT",
+        "price": 9.88,
+        "fees": 4.86,
+        "cost": 4.0,
+        "profit": 1.02
+    },
+    {
+        "asin": "B00UOL8YQM",
+        "price": 9.74,
+        "fees": 0.78,
+        "cost": 5.26,
+        "profit": 3.7
+    },
+    {
+        "asin": "B006RIRAL6",
+        "price": 43.0,
+        "fees": 6.45,
+        "cost": 15.0,
+        "profit": 21.55
+    },
+    {
+        "asin": "B01N4IT99R",
+        "price": 18.99,
+        "fees": 2.85,
+        "cost": 8.0,
+        "profit": 8.14
+    },
+    {
+        "asin": "B079ZXTCJN",
+        "price": 1.54,
+        "fees": 0.3,
+        "cost": 2.0,
+        "profit": -0.76
+    },
+    {
+        "asin": "B005IHMEHM",
+        "price": 9.97,
+        "fees": 0.8,
+        "cost": 4.0,
+        "profit": 5.17
+    },
+    {
+        "asin": "B0BZJSVXJZ",
+        "price": 38.05,
+        "fees": 5.71,
+        "cost": 10.0,
+        "profit": 22.34
+    },
+    {
+        "asin": "B09MDJF8SB",
+        "price": 13.489999999999998,
+        "fees": 2.02,
+        "cost": 32.0,
+        "profit": -20.53
+    },
+    {
+        "asin": "B0DBZGT46P",
+        "price": 845.99,
+        "fees": 67.68,
+        "cost": 598.0,
+        "profit": 180.31
+    },
+    {
+        "asin": "B0DPXGTG1K",
+        "price": 42.54,
+        "fees": 6.38,
+        "cost": 30.0,
+        "profit": 6.16
+    },
+    {
+        "asin": "B0B465ZVH2",
+        "price": 21.99,
+        "fees": 9.07,
+        "cost": 9.0,
+        "profit": 3.92
+    },
+    {
+        "asin": "B07KRCW6LZ",
+        "price": 6.220000000000001,
+        "fees": 0.93,
+        "cost": 5.75,
+        "profit": -0.46
+    },
+    {
+        "asin": "B073VNVWR3",
+        "price": 111.06,
+        "fees": 8.88,
+        "cost": 19.0,
+        "profit": 83.18
+    },
+    {
+        "asin": "B0DJDFY3FL",
+        "price": 345.99,
+        "fees": 27.68,
+        "cost": 300.0,
+        "profit": 18.31
+    },
+    {
+        "asin": "B0CNY2DZSF",
+        "price": 804.44,
+        "fees": 64.36,
+        "cost": 348.0,
+        "profit": 392.08
+    },
+    {
+        "asin": "B0BNQFXLJR",
+        "price": 392.03,
+        "fees": 38.36,
+        "cost": 137.0,
+        "profit": 216.67
+    },
+    {
+        "asin": "B09Z2T94S3",
+        "price": 503.93,
+        "fees": 60.47,
+        "cost": 160.0,
+        "profit": 283.46
+    },
+    {
+        "asin": "B08YWWPNPS",
+        "price": 139.99,
+        "fees": 42.97,
+        "cost": 65.0,
+        "profit": 32.02
+    },
+    {
+        "asin": "B0C59CLN29",
+        "price": 24.29,
+        "fees": 9.41,
+        "cost": 18.0,
+        "profit": -3.12
+    },
+    {
+        "asin": "B0B9TWY11Q",
+        "price": 28.950000000000003,
+        "fees": 2.32,
+        "cost": 20.0,
+        "profit": 6.63
+    },
+    {
+        "asin": "B072VTQ1RD",
+        "price": 75.99,
+        "fees": 11.4,
+        "cost": 58.0,
+        "profit": 6.59
+    },
+    {
+        "asin": "B08CL32752",
+        "price": 829.23,
+        "fees": 73.34,
+        "cost": 499.0,
+        "profit": 256.89
+    },
+    {
+        "asin": "B08V4B9TG9",
+        "price": 134.97,
+        "fees": 10.8,
+        "cost": 38.88,
+        "profit": 85.29
+    },
+    {
+        "asin": "B09YXYDJSY",
+        "price": 145.86,
+        "fees": 29.76,
+        "cost": 60.0,
+        "profit": 56.1
+    },
+    {
+        "asin": "B01BFWU5WY",
+        "price": 55.99,
+        "fees": 8.4,
+        "cost": 9.88,
+        "profit": 37.71
+    },
+    {
+        "asin": "B09HL5NB7R",
+        "price": 500.0,
+        "fees": 78.68,
+        "cost": 9.88,
+        "profit": 411.44
+    },
+    {
+        "asin": "0984365184",
+        "price": 18.49,
+        "fees": 2.77,
+        "cost": 15.0,
+        "profit": 0.72
+    },
+    {
+        "asin": "B0002YP1VC",
+        "price": 22.0,
+        "fees": 3.3,
+        "cost": 19.88,
+        "profit": -1.18
+    },
+    {
+        "asin": "B08B39ZH5M",
+        "price": 29.97,
+        "fees": 12.14,
+        "cost": 19.0,
+        "profit": -1.17
+    },
+    {
+        "asin": "B071RMXVMC",
+        "price": 35.92,
+        "fees": 13.28,
+        "cost": 0.08,
+        "profit": 22.56
+    },
+    {
+        "asin": "B07TXM4MT3",
+        "price": 16.93,
+        "fees": 6.69,
+        "cost": 0.08,
+        "profit": 10.16
+    },
+    {
+        "asin": "B00DRHOL44",
+        "price": 129.99,
+        "fees": 10.4,
+        "cost": 54.0,
+        "profit": 65.59
+    },
+    {
+        "asin": "B01M9K9B3F",
+        "price": 99.3,
+        "fees": 14.9,
+        "cost": 41.0,
+        "profit": 43.4
+    },
+    {
+        "asin": "B0143X5AJA",
+        "price": 73.04,
+        "fees": 22.56,
+        "cost": 32.0,
+        "profit": 18.48
+    },
+    {
+        "asin": "B003N1ZSYG",
+        "price": 45.98,
+        "fees": 6.9,
+        "cost": 22.0,
+        "profit": 17.08
+    },
+    {
+        "asin": "B000GXZ2GS",
+        "price": 34.63,
+        "fees": 5.19,
+        "cost": 17.0,
+        "profit": 12.44
+    },
+    {
+        "asin": "B0FFLF76DQ",
+        "price": 129.99,
+        "fees": 18.04,
+        "cost": 74.0,
+        "profit": 37.95
+    },
+    {
+        "asin": "B0FFKZR537",
+        "price": 119.99,
+        "fees": 17.0,
+        "cost": 68.0,
+        "profit": 34.99
+    },
+    {
+        "asin": "B0F86SFTHH",
+        "price": 48.76,
+        "fees": 12.94,
+        "cost": 24.0,
+        "profit": 11.82
+    },
+    {
+        "asin": "B0F6972CL6",
+        "price": 719.99,
+        "fees": 121.41,
+        "cost": 448.0,
+        "profit": 150.58
+    },
+    {
+        "asin": "B0F1QJXM46",
+        "price": 659.97,
+        "fees": 117.73,
+        "cost": 448.0,
+        "profit": 94.24
+    },
+    {
+        "asin": "B0DS9X9NWS",
+        "price": 17.16,
+        "fees": 8.49,
+        "cost": 16.0,
+        "profit": -7.33
+    },
+    {
+        "asin": "B0DPLKFW3D",
+        "price": 149.58,
+        "fees": 22.44,
+        "cost": 74.0,
+        "profit": 53.14
+    },
+    {
+        "asin": "B0DPLJNT7C",
+        "price": 149.58,
+        "fees": 22.44,
+        "cost": 78.0,
+        "profit": 49.14
+    },
+    {
+        "asin": "B0DPLJCJF4",
+        "price": 149.58,
+        "fees": 22.44,
+        "cost": 74.0,
+        "profit": 53.14
+    },
+    {
+        "asin": "B0DGV5KH64",
+        "price": 75.0,
+        "fees": 18.25,
+        "cost": 38.0,
+        "profit": 18.75
+    },
+    {
+        "asin": "B0DDBFBXSJ",
+        "price": 39.22,
+        "fees": 15.23,
+        "cost": 68.0,
+        "profit": -44.01
+    },
+    {
+        "asin": "B0D9ZC4SZF",
+        "price": 48.33,
+        "fees": 7.25,
+        "cost": 20.0,
+        "profit": 21.08
+    },
+    {
+        "asin": "B0D7P21JTG",
+        "price": 14.44,
+        "fees": 7.69,
+        "cost": 10.0,
+        "profit": -3.25
+    },
+    {
+        "asin": "B0D68BZ9GV",
+        "price": 55.95,
+        "fees": 8.39,
+        "cost": 68.0,
+        "profit": -20.44
+    },
+    {
+        "asin": "B0D688FVZL",
+        "price": 98.16,
+        "fees": 14.72,
+        "cost": 68.0,
+        "profit": 15.44
+    },
+    {
+        "asin": "B0D683CPK6",
+        "price": 210.12,
+        "fees": 31.52,
+        "cost": 68.0,
+        "profit": 110.6
+    },
+    {
+        "asin": "B0D67X7VC3",
+        "price": 129.95,
+        "fees": 19.49,
+        "cost": 68.0,
+        "profit": 42.46
+    },
+    {
+        "asin": "B0D3FPGW4Q",
+        "price": 7.99,
+        "fees": 1.2,
+        "cost": 10.0,
+        "profit": -3.21
+    },
+    {
+        "asin": "B0D2NFFQTB",
+        "price": 110.69,
+        "fees": 41.99,
+        "cost": 100.0,
+        "profit": -31.3
+    },
+    {
+        "asin": "B0CZVSFN5N",
+        "price": 109.99,
+        "fees": 16.5,
+        "cost": 38.0,
+        "profit": 55.49
+    },
+    {
+        "asin": "B0CRJ1PV2F",
+        "price": 177.89,
+        "fees": 32.2,
+        "cost": 100.0,
+        "profit": 45.69
+    },
+    {
+        "asin": "B0CN36NWD1",
+        "price": 273.36,
+        "fees": 41.0,
+        "cost": 68.0,
+        "profit": 164.36
+    },
+    {
+        "asin": "B0CN361TZ9",
+        "price": 189.99,
+        "fees": 28.5,
+        "cost": 68.0,
+        "profit": 93.49
+    },
+    {
+        "asin": "B0CN34R2JP",
+        "price": 273.36,
+        "fees": 41.0,
+        "cost": 68.0,
+        "profit": 164.36
+    },
+    {
+        "asin": "B0CN34LXFZ",
+        "price": 176.78,
+        "fees": 26.52,
+        "cost": 68.0,
+        "profit": 82.26
+    },
+    {
+        "asin": "B0CN34HFZQ",
+        "price": 150.95,
+        "fees": 22.64,
+        "cost": 68.0,
+        "profit": 60.31
+    },
+    {
+        "asin": "B0CN33NDPT",
+        "price": 139.54,
+        "fees": 20.93,
+        "cost": 68.0,
+        "profit": 50.61
+    },
+    {
+        "asin": "B0CN33KDCH",
+        "price": 95.9,
+        "fees": 14.39,
+        "cost": 68.0,
+        "profit": 13.51
+    },
+    {
+        "asin": "B0CN3312N1",
+        "price": 95.95,
+        "fees": 14.39,
+        "cost": 68.0,
+        "profit": 13.56
+    },
+    {
+        "asin": "B0CL8Q1DY7",
+        "price": 165.96,
+        "fees": 24.89,
+        "cost": 38.0,
+        "profit": 103.07
+    },
+    {
+        "asin": "B0CKJS16K2",
+        "price": 70.94,
+        "fees": 10.64,
+        "cost": 30.0,
+        "profit": 30.3
+    },
+    {
+        "asin": "B0C3ZQH8W9",
+        "price": 143.14,
+        "fees": 21.47,
+        "cost": 68.0,
+        "profit": 53.67
+    },
+    {
+        "asin": "B0BXFWNWDP",
+        "price": 189.43,
+        "fees": 28.41,
+        "cost": 68.0,
+        "profit": 93.02
+    },
+    {
+        "asin": "B0BXFWMMJC",
+        "price": 189.43,
+        "fees": 28.41,
+        "cost": 68.0,
+        "profit": 93.02
+    },
+    {
+        "asin": "B0BX8X3QFM",
+        "price": 175.99,
+        "fees": 26.4,
+        "cost": 68.0,
+        "profit": 81.59
+    },
+    {
+        "asin": "B0BVM78RBX",
+        "price": 139.99,
+        "fees": 21.0,
+        "cost": 44.0,
+        "profit": 74.99
+    },
+    {
+        "asin": "B0BQTKF2MY",
+        "price": 74.95,
+        "fees": 12.74,
+        "cost": 29.0,
+        "profit": 33.21
+    },
+    {
+        "asin": "B0BQTDP1MZ",
+        "price": 70.95,
+        "fees": 12.06,
+        "cost": 29.0,
+        "profit": 29.89
+    },
+    {
+        "asin": "B0BL84TJ9T",
+        "price": 79.1,
+        "fees": 11.87,
+        "cost": 54.0,
+        "profit": 13.23
+    },
+    {
+        "asin": "B0BH6FWKCS",
+        "price": 115.0,
+        "fees": 43.58,
+        "cost": 100.0,
+        "profit": -28.58
+    },
+    {
+        "asin": "B0BD76KZZ5",
+        "price": 66.61,
+        "fees": 28.54,
+        "cost": 54.0,
+        "profit": -15.93
+    },
+    {
+        "asin": "B0B3TB8KCM",
+        "price": 55.95,
+        "fees": 8.39,
+        "cost": 32.0,
+        "profit": 15.56
+    },
+    {
+        "asin": "B0B15BBXT9",
+        "price": 12.99,
+        "fees": 6.5,
+        "cost": 10.0,
+        "profit": -3.51
+    },
+    {
+        "asin": "B09Z99RSSY",
+        "price": 162.0,
+        "fees": 24.3,
+        "cost": 68.0,
+        "profit": 69.7
+    },
+    {
+        "asin": "B09Y57F1HL",
+        "price": 426.74,
+        "fees": 51.21,
+        "cost": 348.0,
+        "profit": 27.53
+    },
+    {
+        "asin": "B09XRDSD5Q",
+        "price": 14.0,
+        "fees": 0.7,
+        "cost": 10.0,
+        "profit": 3.3
+    },
+    {
+        "asin": "B09VYK5FGG",
+        "price": 74.91,
+        "fees": 8.99,
+        "cost": 68.0,
+        "profit": -2.08
+    },
+    {
+        "asin": "B09VCMLBJZ",
+        "price": 14.0,
+        "fees": 3.9,
+        "cost": 17.0,
+        "profit": -6.9
+    },
+    {
+        "asin": "B09T935X38",
+        "price": 95.0,
+        "fees": 18.51,
+        "cost": 104.0,
+        "profit": -27.51
+    },
+    {
+        "asin": "B09N5JM1X7",
+        "price": 192.04,
+        "fees": 28.81,
+        "cost": 68.0,
+        "profit": 95.23
+    },
+    {
+        "asin": "B09N5FPN73",
+        "price": 150.95,
+        "fees": 22.64,
+        "cost": 68.0,
+        "profit": 60.31
+    },
+    {
+        "asin": "B09N52VWPG",
+        "price": 78.89,
+        "fees": 11.83,
+        "cost": 68.0,
+        "profit": -0.94
+    },
+    {
+        "asin": "B09MSNSBH6",
+        "price": 180.0,
+        "fees": 27.0,
+        "cost": 68.0,
+        "profit": 85.0
+    },
+    {
+        "asin": "B09DJFB2T2",
+        "price": 38.06,
+        "fees": 5.71,
+        "cost": 24.0,
+        "profit": 8.35
+    },
+    {
+        "asin": "B09CF2Q7LB",
+        "price": 10.99,
+        "fees": 8.73,
+        "cost": 8.0,
+        "profit": -5.74
+    },
+    {
+        "asin": "B09BW4M3X1",
+        "price": 31.979999999999997,
+        "fees": 4.8,
+        "cost": 25.0,
+        "profit": 2.18
+    },
+    {
+        "asin": "B096RTM18L",
+        "price": 11.39,
+        "fees": 7.08,
+        "cost": 10.0,
+        "profit": -5.69
+    },
+    {
+        "asin": "B08WBVQMJC",
+        "price": 31.13,
+        "fees": 4.67,
+        "cost": 28.0,
+        "profit": -1.54
+    },
+    {
+        "asin": "B08QY2PDKM",
+        "price": 37.99,
+        "fees": 3.04,
+        "cost": 24.0,
+        "profit": 10.95
+    },
+    {
+        "asin": "B08D7TS4F8",
+        "price": 19.23,
+        "fees": 2.88,
+        "cost": 10.0,
+        "profit": 6.35
+    },
+    {
+        "asin": "B08BT6T4H7",
+        "price": 59.62,
+        "fees": 16.95,
+        "cost": 20.0,
+        "profit": 22.67
+    },
+    {
+        "asin": "B087WPZ4Q9",
+        "price": 46.79,
+        "fees": 7.02,
+        "cost": 39.0,
+        "profit": 0.77
+    },
+    {
+        "asin": "B07PZFB96F",
+        "price": 23.09,
+        "fees": 14.03,
+        "cost": 22.0,
+        "profit": -12.94
+    },
+    {
+        "asin": "B07P5RVG48",
+        "price": 22.8,
+        "fees": 11.84,
+        "cost": 12.0,
+        "profit": -1.04
+    },
+    {
+        "asin": "B07N1499BP",
+        "price": 145.0,
+        "fees": 21.75,
+        "cost": 68.0,
+        "profit": 55.25
+    },
+    {
+        "asin": "B07MZPT6PZ",
+        "price": 94.44,
+        "fees": 14.17,
+        "cost": 68.0,
+        "profit": 12.27
+    },
+    {
+        "asin": "B07CVP8ST2",
+        "price": 264.23,
+        "fees": 39.63,
+        "cost": 68.0,
+        "profit": 156.6
+    },
+    {
+        "asin": "B07C7TVLR2",
+        "price": 115.95,
+        "fees": 17.39,
+        "cost": 48.0,
+        "profit": 50.56
+    },
+    {
+        "asin": "B07BMP1HN3",
+        "price": 31.9,
+        "fees": 16.75,
+        "cost": 19.0,
+        "profit": -3.85
+    },
+    {
+        "asin": "B077MQLJ7F",
+        "price": 43.9,
+        "fees": 6.59,
+        "cost": 20.0,
+        "profit": 17.31
+    },
+    {
+        "asin": "B075GHP72M",
+        "price": 38.99,
+        "fees": 5.85,
+        "cost": 24.0,
+        "profit": 9.14
+    },
+    {
+        "asin": "B072HNQ1XL",
+        "price": 27.0,
+        "fees": 10.26,
+        "cost": 10.0,
+        "profit": 6.74
+    },
+    {
+        "asin": "B01NH595UN",
+        "price": 23.64,
+        "fees": 9.07,
+        "cost": 10.0,
+        "profit": 4.57
+    },
+    {
+        "asin": "B01N6RIA06",
+        "price": 24.57,
+        "fees": 9.56,
+        "cost": 10.0,
+        "profit": 5.01
+    },
+    {
+        "asin": "B00SJW8DC8",
+        "price": 166.0,
+        "fees": 24.9,
+        "cost": 68.0,
+        "profit": 73.1
+    },
+    {
+        "asin": "B00GWP9C2O",
+        "price": 129.21,
+        "fees": 19.38,
+        "cost": 68.0,
+        "profit": 41.83
+    },
+    {
+        "asin": "B00FRR5XGM",
+        "price": 35.64,
+        "fees": 5.35,
+        "cost": 24.0,
+        "profit": 6.29
+    },
+    {
+        "asin": "B00APYOFTI",
+        "price": 54.89,
+        "fees": 14.28,
+        "cost": 68.0,
+        "profit": -27.39
+    },
+    {
+        "asin": "B009HFVO0E",
+        "price": 50.83,
+        "fees": 15.34,
+        "cost": 19.0,
+        "profit": 16.49
+    },
+    {
+        "asin": "B007WAJNRM",
+        "price": 29.99,
+        "fees": 4.5,
+        "cost": 15.0,
+        "profit": 10.49
+    },
+    {
+        "asin": "B007U1ZV1A",
+        "price": 24.99,
+        "fees": 10.3,
+        "cost": 10.0,
+        "profit": 4.69
+    },
+    {
+        "asin": "B00604PL5O",
+        "price": 15.37,
+        "fees": 7.59,
+        "cost": 8.0,
+        "profit": -0.22
+    },
+    {
+        "asin": "B004B6GTJK",
+        "price": 24.5,
+        "fees": 8.67,
+        "cost": 10.0,
+        "profit": 5.83
+    },
+    {
+        "asin": "B003R7KYV8",
+        "price": 29.99,
+        "fees": 4.5,
+        "cost": 12.0,
+        "profit": 13.49
+    },
+    {
+        "asin": "B000JLIENA",
+        "price": 120.22,
+        "fees": 18.03,
+        "cost": 68.0,
+        "profit": 34.19
+    },
+    {
+        "asin": "B000FASRVE",
+        "price": 120.98,
+        "fees": 18.15,
+        "cost": 68.0,
+        "profit": 34.83
+    },
+    {
+        "asin": "B000ES8C3A",
+        "price": 23.7,
+        "fees": 3.56,
+        "cost": 14.0,
+        "profit": 6.14
+    },
+    {
+        "asin": "B0B5P8LRL8",
+        "price": 37.01,
+        "fees": 12.87,
+        "cost": 90.0,
+        "profit": -65.86
+    }
+]

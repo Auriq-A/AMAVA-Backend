@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Universal Product Scraper",
+    "version": "1.0",
+    "description": "Select product containers on any website and send extracted HTML to backend.",
+    "permissions": [
+        "scripting",
+        "activeTab"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
