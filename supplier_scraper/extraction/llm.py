@@ -30,9 +30,13 @@ _SYSTEM = (
     "object with these keys: " + ", ".join(_FIELDS) + ". "
     "Use null for anything not present. price must be a number (no currency "
     "symbol); put the currency code in 'currency'. moq is an integer (minimum "
-    "order quantity) or null. in_stock is true/false/null. If the page is a "
-    "catalog/list, return every product on it. If it's a single product page, "
-    "return a one-element array. Do not invent values."
+    "order quantity) or null. in_stock is true/false/null. "
+    "product_url: when a PRODUCT LINKS section is provided below, match each "
+    "product to its most likely URL from that list (by name, SKU, or listing "
+    "order) — only use URLs from that list, never construct or guess URLs. "
+    "If the page is a catalog/list, return every product on it. "
+    "If it's a single product page, return a one-element array. "
+    "Do not invent values."
 )
 
 # Extra fields only meaningful on a single product's detail page.
@@ -60,6 +64,21 @@ _DETAIL_SYSTEM = (
     "null (or an empty array/object for images/specifications)."
 )
 
+_LOCATE_LOGIN_SYSTEM = (
+    "Identify the login form on this web page HTML. "
+    "Return ONLY a JSON object (no prose, no markdown fences) with these keys: "
+    "username_selector (CSS selector for the email or username input — prefer "
+    "#id, else [name='...'], else input[type='email'], else input[type='text']), "
+    "password_selector (CSS selector for the password input — prefer #id, else "
+    "[name='...'], else input[type='password']), "
+    "submit_selector (CSS selector for the login/submit button — prefer "
+    "button[type='submit'], else input[type='submit'], else a visible button "
+    "with login/sign-in text). "
+    "Set a key to null if the element is not present. "
+    "Only return selectors for elements that actually exist in the HTML — "
+    "do not invent or guess."
+)
+
 
 class GeminiExtractor(Extractor):
     def __init__(self, model: str = "gemini-2.5-flash-lite",
@@ -84,6 +103,11 @@ class GeminiExtractor(Extractor):
         hint: str = "",
     ) -> list[Product]:
         from google.genai import types
+        from .html_clean import extract_product_links
+
+        # Pull product-page hrefs from raw HTML *before* cleaning so Gemini
+        # can match each product to its real URL (the "dynamic" capability).
+        product_links = extract_product_links(html, page_url)
 
         cleaned = clean_html(html, max_chars=self._max_html_chars)
         prompt_parts = [_SYSTEM]
@@ -92,6 +116,12 @@ class GeminiExtractor(Extractor):
         if page_url:
             prompt_parts.append(
                 f"Page URL (resolve relative product/image links against it): {page_url}"
+            )
+        if product_links:
+            prompt_parts.append(
+                f"PRODUCT LINKS ({len(product_links)} candidate URLs from this page"
+                " — match each product to its most likely one):\n"
+                + "\n".join(product_links)
             )
         prompt_parts.append("PAGE HTML:\n" + cleaned)
         prompt = "\n\n".join(prompt_parts)
@@ -143,6 +173,44 @@ class GeminiExtractor(Extractor):
             raise ExtractionError(f"Gemini detail extraction call failed: {exc}") from exc
 
         return self._parse_detail(resp.text or "")
+
+    async def locate_login_form(
+        self,
+        html: str,
+        *,
+        page_url: str | None = None,
+    ) -> dict[str, str | None]:
+        """Ask Gemini to find login form CSS selectors in the page HTML."""
+        from google.genai import types
+
+        cleaned = clean_html(html, max_chars=self._max_html_chars)
+        prompt_parts = [_LOCATE_LOGIN_SYSTEM]
+        if page_url:
+            prompt_parts.append(f"Page URL: {page_url}")
+        prompt_parts.append("PAGE HTML:\n" + cleaned)
+        prompt = "\n\n".join(prompt_parts)
+
+        try:
+            resp = await self._client.aio.models.generate_content(
+                model=self._model,
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    temperature=0,
+                    response_mime_type="application/json",
+                ),
+            )
+        except Exception as exc:  # noqa: BLE001
+            raise ExtractionError(f"Gemini login-form locator call failed: {exc}") from exc
+
+        raw = _loads_lenient(resp.text or "")
+        if not isinstance(raw, dict):
+            raise ExtractionError("Login form locator returned non-object JSON.")
+
+        return {
+            "username_selector": raw.get("username_selector") or None,
+            "password_selector": raw.get("password_selector") or None,
+            "submit_selector": raw.get("submit_selector") or None,
+        }
 
     # -- parsing ----------------------------------------------------------
     @staticmethod

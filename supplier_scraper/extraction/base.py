@@ -35,3 +35,21 @@ class Extractor:
         found on the page.
         """
         raise NotImplementedError
+
+    async def locate_login_form(
+        self,
+        html: str,
+        *,
+        page_url: str | None = None,
+    ) -> dict[str, str | None]:
+        """Identify login form CSS selectors from page HTML.
+
+        Returns a dict with keys:
+          username_selector  — input for email/username
+          password_selector  — input for password
+          submit_selector    — login/submit button
+
+        Any selector that can't be found is set to None.
+        Raises ``ExtractionError`` if the LLM call fails.
+        """
+        raise NotImplementedError

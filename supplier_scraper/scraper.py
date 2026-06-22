@@ -1,8 +1,8 @@
 """SupplierScraper - the orchestrator / facade.
 
-Routes each scrape to the right Bright Data transport (browser for gated sites,
-Web Unlocker for public ones), walks pagination, and runs Gemini extraction on
-each page. Async-first to fit the ADK agent; sync convenience wrappers provided.
+Routes each scrape to the right transport (browser for gated sites, Web Unlocker
+for public ones), walks pagination, and runs Gemini extraction on each page.
+Async-first to fit the ADK agent; sync convenience wrappers provided.
 
     from supplier_scraper import SupplierScraper
 
@@ -12,13 +12,18 @@ each page. Async-first to fit the ADK agent; sync convenience wrappers provided.
     for p in result.products:
         print(p.title, p.price)
 
-Optional enrichment: pass ``enrich=True`` to also visit each product's detail
-page (its ``product_url``) and merge in fuller info - description, gallery
-images, a specifications table, rating and stock quantity - via
-``Extractor.extract_detail``. This reuses the same transport/session (so a
-logged-in session stays logged in) and is capped by ``max_enrich`` /
-``config.default_max_enrich`` since it costs one extra page fetch + one extra
-Gemini call per product.
+Dynamic login (no hardcoded selectors):
+    result = await scraper.scrape(
+        "https://app.avasam.com/seller/products",
+        login_url="https://app.avasam.com/login",
+        username="your@email.com",
+        password="yourpassword",
+        scroll_count=15,
+        enrich=True,
+    )
+
+Set BRIGHTDATA_USE=false to skip Bright Data and use plain httpx / local
+Playwright instead (useful for development and unblocked public sites).
 """
 from __future__ import annotations
 
@@ -32,7 +37,12 @@ from .exceptions import ScraperConfigError
 from .extraction import Extractor, GeminiExtractor
 from .models import PaginationConfig, Product, ScrapeResult, SupplierProfile
 from .suppliers import get_supplier
-from .transports import ScrapingBrowserSession, WebUnlockerTransport
+from .transports import (
+    LocalBrowserSession,
+    LocalHttpTransport,
+    ScrapingBrowserSession,
+    WebUnlockerTransport,
+)
 
 
 class SupplierScraper:
@@ -65,16 +75,30 @@ class SupplierScraper:
         pagination: PaginationConfig | None = None,
         enrich: bool = False,
         max_enrich: int | None = None,
+        scroll_count: int = 0,
+        login_url: str | None = None,
+        username: str | None = None,
+        password: str | None = None,
     ) -> ScrapeResult:
-        """Scrape an ad-hoc URL without a registered profile.
+        """Scrape any URL. Supports dynamic login via Gemini — no hardcoded
+        selectors needed.
 
-        If ``enrich`` is True, also visit each product's detail page
-        (``product_url``) and merge in fuller info (description, images,
-        specifications, rating, stock). This costs one extra page fetch and
-        one extra Gemini call per enriched product, capped by ``max_enrich``
-        (default ``config.default_max_enrich``; pass ``0`` to enrich every
-        product found - mind the cost on large catalogs).
+        ``login_url`` / ``username`` / ``password`` — when provided, the
+        scraper navigates to ``login_url`` first, asks Gemini to locate the
+        login form, fills it in with the given credentials, and proceeds to
+        scrape ``url`` in the same (now-authenticated) session. Requires the
+        browser transport (set automatically when these params are given).
+
+        ``scroll_count`` — window-height scrolls before reading each catalog
+        page (browser transport only). Use ~15 for infinite-scroll sites.
+
+        If ``enrich`` is True, also visit each product's detail page and
+        merge in fuller info (description, images, specifications, rating,
+        stock). Capped by ``max_enrich`` (pass ``0`` for no cap).
         """
+        if login_url and transport == "auto":
+            transport = "browser"
+            requires_login = True
         profile = SupplierProfile(
             name=url,
             base_url=url,
@@ -83,10 +107,12 @@ class SupplierScraper:
             pagination=pagination or PaginationConfig(),
             extraction_hint=hint,
             wait_for=wait_for,
+            scroll_count=scroll_count,
         )
         return await self._run(
             profile, start_url=url, max_pages=max_pages,
             enrich=enrich, max_enrich=max_enrich,
+            login_url=login_url, username=username, password=password,
         )
 
     async def scrape_supplier(
@@ -124,6 +150,9 @@ class SupplierScraper:
         max_pages: int | None,
         enrich: bool = False,
         max_enrich: int | None = None,
+        login_url: str | None = None,
+        username: str | None = None,
+        password: str | None = None,
     ) -> ScrapeResult:
         max_pages = self._resolve_max_pages(profile, max_pages)
         kind = profile.resolve_transport()
@@ -134,7 +163,10 @@ class SupplierScraper:
         if kind == "unlocker":
             await self._collect_unlocker(profile, start_url, max_pages, result, extractor, cap)
         else:
-            await self._collect_browser(profile, start_url, max_pages, result, extractor, cap)
+            await self._collect_browser(
+                profile, start_url, max_pages, result, extractor, cap,
+                login_url=login_url, username=username, password=password,
+            )
 
         return result
 
@@ -145,7 +177,11 @@ class SupplierScraper:
                 "scraping first page only via Web Unlocker."
             )
         all_products: list[Product] = []
-        async with WebUnlockerTransport(self.config.bright_data) as transport:
+        TransportCls = (
+            WebUnlockerTransport if self.config.bright_data.use_bright_data
+            else LocalHttpTransport
+        )
+        async with TransportCls(self.config.bright_data) as transport:
             for page_url in self._page_urls(start_url, profile.pagination, max_pages):
                 fr = await transport.fetch(page_url, wait_for=profile.wait_for)
                 result.pages_scraped += 1
@@ -161,10 +197,20 @@ class SupplierScraper:
 
         result.products.extend(all_products)
 
-    async def _collect_browser(self, profile, start_url, max_pages, result, extractor, cap):
+    async def _collect_browser(
+        self, profile, start_url, max_pages, result, extractor, cap,
+        *, login_url=None, username=None, password=None,
+    ):
         all_products: list[Product] = []
-        async with ScrapingBrowserSession(self.config) as session:
-            if profile.requires_login:
+        SessionCls = (
+            ScrapingBrowserSession if self.config.bright_data.use_bright_data
+            else LocalBrowserSession
+        )
+        async with SessionCls(self.config) as session:
+            if login_url and username and password:
+                # Dynamic login: Gemini finds the form selectors automatically.
+                await session.dynamic_login(login_url, username, password, extractor)
+            elif profile.requires_login:
                 if not profile.login:
                     raise ScraperConfigError(
                         f"Supplier {profile.name!r} requires login but has no "
@@ -175,11 +221,13 @@ class SupplierScraper:
                     if self._credential_provider
                     else None
                 )
-                username, password = creds if creds else (None, None)
-                await session.login(profile.login, username=username, password=password)
+                _username, _password = creds if creds else (None, None)
+                await session.login(profile.login, username=_username, password=_password)
 
             if profile.pagination.strategy == "next_button" and profile.pagination.next_selector:
-                fr = await session.fetch(start_url, wait_for=profile.wait_for)
+                fr = await session.fetch(
+                    start_url, wait_for=profile.wait_for, scroll_count=profile.scroll_count
+                )
                 result.pages_scraped += 1
                 all_products.extend(
                     await self._extract_one(extractor, fr.html, fr.url, profile, result)
@@ -197,7 +245,9 @@ class SupplierScraper:
                     await asyncio.sleep(self.config.page_delay)
             else:
                 for page_url in self._page_urls(start_url, profile.pagination, max_pages):
-                    fr = await session.fetch(page_url, wait_for=profile.wait_for)
+                    fr = await session.fetch(
+                        page_url, wait_for=profile.wait_for, scroll_count=profile.scroll_count
+                    )
                     result.pages_scraped += 1
                     all_products.extend(
                         await self._extract_one(extractor, fr.html, page_url, profile, result)
@@ -290,3 +340,23 @@ class SupplierScraper:
         for i in range(start, start + max_pages):
             q = {**base_q, pagination.page_param: i}
             yield urlunparse(parsed._replace(query=urlencode(q)))
+
+
+if "__main__" == __name__:
+    async def main():
+        scraper = SupplierScraper()
+
+        result = await scraper.scrape(
+            "https://app.avasam.com/seller/products",
+            login_url="https://app.avasam.com/login",
+            username="info@sayaholdingllc.com",
+            password="AmazonFBA$1483",
+            scroll_count=15,
+            enrich=True,
+        )
+        print(f"Found {result.count} products")
+        for p in result.products[:3]:
+            print(p.title, p.price, p.product_url)
+        return result
+
+    asyncio.run(main())

@@ -35,11 +35,11 @@ def get_supplier(name: str) -> SupplierProfile:
 register(
     SupplierProfile(
         name="avasam",
-        base_url="https://www.avasam.com",
+        base_url="https://app.avasam.com/seller/product/search",
         requires_login=True,
         transport="browser",
         login=LoginConfig(
-            url="https://app.avasam.com/login",            # TODO confirm
+            url="https://app.avasam.com/seller/sellerregister/login",            # TODO confirm
             username_selector="input[type=email]",          # TODO confirm
             password_selector="input[type=password]",        # TODO confirm
             submit_selector="button[type=submit]",           # TODO confirm

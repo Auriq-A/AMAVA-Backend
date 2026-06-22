@@ -174,6 +174,10 @@ class SupplierProfile:
     # an empty shell until JS populates this; static/SSR sites can leave it
     # as None.
     detail_wait_for: str | None = None
+    # How many window-height scrolls to perform on each catalog page before
+    # reading it (browser transport only). Use for infinite-scroll / lazy-load
+    # sites where products load as you scroll. 0 = no scrolling (default).
+    scroll_count: int = 0
 
     def resolve_transport(self) -> str:
         if self.transport != "auto":

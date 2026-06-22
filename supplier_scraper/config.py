@@ -36,6 +36,10 @@ class BrightDataConfig:
         api_token + unlocker_zone
     """
 
+    # Set BRIGHTDATA_USE=false to skip Bright Data and use plain httpx (unlocker
+    # path) or local Playwright (browser path) instead. Useful for development
+    # and for public sites that don't block plain HTTP requests.
+    use_bright_data: bool = True
     # Scraping Browser
     browser_auth: str | None = None
     browser_host: str = "brd.superproxy.io"
@@ -47,7 +51,9 @@ class BrightDataConfig:
 
     @classmethod
     def from_env(cls, prefix: str = "BRIGHTDATA_") -> "BrightDataConfig":
+        use_val = os.getenv("BRIGHTDATA_USE", "true").strip().lower()
         return cls(
+            use_bright_data=use_val not in ("false", "0", "no", "off"),
             browser_auth=os.getenv(f"{prefix}BROWSER_AUTH"),
             browser_host=os.getenv(f"{prefix}BROWSER_HOST", "brd.superproxy.io"),
             browser_port=int(os.getenv(f"{prefix}BROWSER_PORT", "9222")),
@@ -102,6 +108,10 @@ class ScraperConfig:
     # Politeness: delay between page fetches within a run (seconds).
     page_delay: float = 1.0
     default_max_pages: int = 1
+    # When using the local browser (BRIGHTDATA_USE=false), run headless?
+    # Set LOCAL_BROWSER_HEADLESS=false to watch the browser — useful for
+    # debugging login/bot-check issues. Ignored by the Bright Data transport.
+    local_browser_headless: bool = True
     # Default cap on how many products get detail-page enrichment when
     # enrich=True and no explicit max_enrich is given. Each enriched product
     # costs one extra page fetch + one extra Gemini call, so keep this modest
@@ -115,6 +125,8 @@ class ScraperConfig:
         model = os.getenv("GEMINI_EXTRACTION_MODEL")
         if model:
             cfg.extraction_model = model
+        headless_val = os.getenv("LOCAL_BROWSER_HEADLESS", "true").strip().lower()
+        cfg.local_browser_headless = headless_val not in ("false", "0", "no", "off")
         for key, value in overrides.items():
             if hasattr(cfg, key):
                 setattr(cfg, key, value)
