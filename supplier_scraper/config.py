@@ -109,9 +109,10 @@ class ScraperConfig:
     page_delay: float = 1.0
     default_max_pages: int = 1
     # When using the local browser (BRIGHTDATA_USE=false), run headless?
-    # Set LOCAL_BROWSER_HEADLESS=false to watch the browser — useful for
-    # debugging login/bot-check issues. Ignored by the Bright Data transport.
-    local_browser_headless: bool = True
+    # Default is HEADED (visible) — gated SPAs (avasam) need it, and it's the
+    # current preference. Set LOCAL_BROWSER_HEADLESS=true to run hidden.
+    # Ignored by the Bright Data transport.
+    local_browser_headless: bool = False
     # Default cap on how many products get detail-page enrichment when
     # enrich=True and no explicit max_enrich is given. Each enriched product
     # costs one extra page fetch + one extra Gemini call, so keep this modest
@@ -125,8 +126,8 @@ class ScraperConfig:
         model = os.getenv("GEMINI_EXTRACTION_MODEL")
         if model:
             cfg.extraction_model = model
-        headless_val = os.getenv("LOCAL_BROWSER_HEADLESS", "true").strip().lower()
-        cfg.local_browser_headless = headless_val not in ("false", "0", "no", "off")
+        headless_val = os.getenv("LOCAL_BROWSER_HEADLESS", "false").strip().lower()
+        cfg.local_browser_headless = headless_val in ("true", "1", "yes", "on")
         for key, value in overrides.items():
             if hasattr(cfg, key):
                 setattr(cfg, key, value)

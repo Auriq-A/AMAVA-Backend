@@ -1,3 +1,4 @@
 SERVER:uvicorn server:app --host 0.0.0.0 --port 51483 --reload
 NGROK:ngrok http --url=electric-mistakenly-rat.ngrok-free.app 51483
 ADK SERVER:###cd agent #### adk api_server --allow_origins=http://localhost:51483 --host=0.0.0.0 --port=1483
+$env:PYTHONPATH="D:\AMAVA-CLEAN"; adk api_server agents --port 1483  
