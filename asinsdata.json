@@ -1,0 +1,489 @@
+{
+    "722429128058": {
+        "restrictions": []
+    },
+    "039593163205": {
+        "restrictions": []
+    },
+    "039593170074": {
+        "restrictions": []
+    },
+    "039593175406": {
+        "restrictions": []
+    },
+    "039593163076": {
+        "restrictions": []
+    },
+    "039593163908": {
+        "restrictions": []
+    },
+    "039593167159": {
+        "restrictions": []
+    },
+    "039593168606": {
+        "restrictions": []
+    },
+    "039593168002": {
+        "restrictions": []
+    },
+    "039593168019": {
+        "restrictions": []
+    },
+    "039593168705": {
+        "restrictions": []
+    },
+    "039593167005": {
+        "restrictions": []
+    },
+    "039593168903": {
+        "restrictions": []
+    },
+    "039593167548": {
+        "restrictions": []
+    },
+    "039593168958": {
+        "restrictions": []
+    },
+    "039593167531": {
+        "restrictions": []
+    },
+    "039593167609": {
+        "restrictions": []
+    },
+    "039593167654": {
+        "restrictions": []
+    },
+    "039593167555": {
+        "restrictions": []
+    },
+    "039593167807": {
+        "restrictions": []
+    },
+    "039593167821": {
+        "restrictions": []
+    },
+    "039593190508": {
+        "restrictions": []
+    },
+    "039593191000": {
+        "restrictions": []
+    },
+    "039593197804": {
+        "restrictions": []
+    },
+    "039593209019": {
+        "restrictions": []
+    },
+    "039593209507": {
+        "restrictions": []
+    },
+    "079851004246": {
+        "restrictions": []
+    },
+    "079851004345": {
+        "restrictions": []
+    },
+    "039593354047": {
+        "restrictions": []
+    },
+    "039593354207": {
+        "restrictions": []
+    },
+    "039593213504": {
+        "restrictions": []
+    },
+    "039593225606": {
+        "restrictions": []
+    },
+    "039593230006": {
+        "restrictions": []
+    },
+    "039593233250": {
+        "restrictions": []
+    },
+    "039593222209": {
+        "restrictions": []
+    },
+    "792215542009": {
+        "restrictions": []
+    },
+    "039593251209": {
+        "restrictions": []
+    },
+    "039593240500": {
+        "restrictions": []
+    },
+    "039593072446": {
+        "restrictions": []
+    },
+    "039593260508": {
+        "restrictions": []
+    },
+    "039593268009": {
+        "restrictions": []
+    },
+    "039593260010": {
+        "restrictions": []
+    },
+    "039593262052": {
+        "restrictions": []
+    },
+    "039593260041": {
+        "restrictions": []
+    },
+    "039593290000": {
+        "restrictions": []
+    },
+    "039593303656": {
+        "restrictions": []
+    },
+    "039593300006": {
+        "restrictions": []
+    },
+    "039593303502": {
+        "restrictions": []
+    },
+    "039593308606": {
+        "restrictions": []
+    },
+    "039593322008": {
+        "restrictions": []
+    },
+    "039593322107": {
+        "restrictions": []
+    },
+    "039593322206": {
+        "restrictions": []
+    },
+    "049206188464": {
+        "restrictions": []
+    },
+    "049206243231": {
+        "restrictions": []
+    },
+    "039593488506": {
+        "restrictions": []
+    },
+    "039593488353": {
+        "restrictions": []
+    },
+    "039593487721": {
+        "restrictions": []
+    },
+    "039593487820": {
+        "restrictions": []
+    },
+    "039593487844": {
+        "restrictions": []
+    },
+    "022384015708": {
+        "restrictions": []
+    },
+    "031626059240": {
+        "restrictions": []
+    },
+    "022384952287": {
+        "restrictions": []
+    },
+    "070798187504": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "conditionType": "new_new",
+                "reasons": [
+                    {
+                        "reasonCode": "APPROVAL_REQUIRED",
+                        "message": "You need approval to list in this brand.",
+                        "links": [
+                            {
+                                "resource": "https://sellercentral.amazon.com/hz/approvalrequest/restrictions/approve?asin=B002GD2DY0",
+                                "verb": "GET",
+                                "title": "Request Approval via Seller Central.",
+                                "type": "text/html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "075650000571": {
+        "restrictions": []
+    },
+    "039593029006": {
+        "restrictions": []
+    },
+    "842470141957": {
+        "restrictions": []
+    },
+    "049206645899": {
+        "restrictions": []
+    },
+    "842470141964": {
+        "restrictions": []
+    },
+    "039593903849": {
+        "restrictions": []
+    },
+    "039593914104": {
+        "restrictions": []
+    },
+    "039593883004": {
+        "restrictions": []
+    },
+    "039593903016": {
+        "restrictions": []
+    },
+    "039593902507": {
+        "restrictions": []
+    },
+    "039593999217": {
+        "restrictions": []
+    },
+    "757136480502": {
+        "restrictions": []
+    },
+    "039593998906": {
+        "restrictions": []
+    },
+    "039593999002": {
+        "restrictions": []
+    },
+    "722429640390": {
+        "restrictions": []
+    },
+    "722429640314": {
+        "restrictions": []
+    },
+    "039593512201": {
+        "restrictions": []
+    },
+    "039593512003": {
+        "restrictions": []
+    },
+    "039593713516": {
+        "restrictions": []
+    },
+    "039593744909": {
+        "restrictions": []
+    },
+    "039593746316": {
+        "restrictions": []
+    },
+    "039593756001": {
+        "restrictions": []
+    },
+    "039593757602": {
+        "restrictions": []
+    },
+    "X001ULQWDD": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "reasons": [
+                    {
+                        "reasonCode": "ASIN_NOT_FOUND",
+                        "message": "ASIN does not exist in this marketplace.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "X001FEQ3U7": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "reasons": [
+                    {
+                        "reasonCode": "ASIN_NOT_FOUND",
+                        "message": "ASIN does not exist in this marketplace.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "X001SJAH4H": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "reasons": [
+                    {
+                        "reasonCode": "ASIN_NOT_FOUND",
+                        "message": "ASIN does not exist in this marketplace.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "X001SI6KQR": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "reasons": [
+                    {
+                        "reasonCode": "ASIN_NOT_FOUND",
+                        "message": "ASIN does not exist in this marketplace.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "X001VXC167": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "reasons": [
+                    {
+                        "reasonCode": "ASIN_NOT_FOUND",
+                        "message": "ASIN does not exist in this marketplace.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "X001VPA423": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "reasons": [
+                    {
+                        "reasonCode": "ASIN_NOT_FOUND",
+                        "message": "ASIN does not exist in this marketplace.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "X001FEQAAF": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "reasons": [
+                    {
+                        "reasonCode": "ASIN_NOT_FOUND",
+                        "message": "ASIN does not exist in this marketplace.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "X001VN563H": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "reasons": [
+                    {
+                        "reasonCode": "ASIN_NOT_FOUND",
+                        "message": "ASIN does not exist in this marketplace.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "X001SJ7DRL": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "reasons": [
+                    {
+                        "reasonCode": "ASIN_NOT_FOUND",
+                        "message": "ASIN does not exist in this marketplace.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "X001UFGUJZ": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "reasons": [
+                    {
+                        "reasonCode": "ASIN_NOT_FOUND",
+                        "message": "ASIN does not exist in this marketplace.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "X001UE7IUL": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "reasons": [
+                    {
+                        "reasonCode": "ASIN_NOT_FOUND",
+                        "message": "ASIN does not exist in this marketplace.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "X001VVPM6P": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "reasons": [
+                    {
+                        "reasonCode": "ASIN_NOT_FOUND",
+                        "message": "ASIN does not exist in this marketplace.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "X001SIEZQT": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "reasons": [
+                    {
+                        "reasonCode": "ASIN_NOT_FOUND",
+                        "message": "ASIN does not exist in this marketplace.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "X001SI4U37": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "reasons": [
+                    {
+                        "reasonCode": "ASIN_NOT_FOUND",
+                        "message": "ASIN does not exist in this marketplace.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    },
+    "X001VRJDMD": {
+        "restrictions": [
+            {
+                "marketplaceId": "ATVPDKIKX0DER",
+                "reasons": [
+                    {
+                        "reasonCode": "ASIN_NOT_FOUND",
+                        "message": "ASIN does not exist in this marketplace.",
+                        "links": []
+                    }
+                ]
+            }
+        ]
+    }
+}

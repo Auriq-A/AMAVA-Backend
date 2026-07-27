@@ -43,9 +43,10 @@ stored_checked_data = {"results": {}, "skipped": [], "timestamp": None}
 BASE_URL = "https://sellingpartnerapi-na.amazon.com"
 LWA_CLIENT_ID = "amzn1.application-oa2-client.5b8b71c8ff56492cbfe3e76508df84b9"
 LWA_CLIENT_SECRET = (
-    "amzn1.oa2-cs.v1.125f7e93012c23220035b57432b735034172c90f8adfa7e8d02c97404102dec6"
+       "amzn1.oa2-cs.v1.490ef4076b35d6f4568dab6be8a0b99b299cd4cb74fdf2029d8a1cec41833d1d"
+
 )
-LWA_REFRESH_TOKEN = "Atzr|IwEBIIoBKW7BXRrH_RjDUHWYBtJKOwtqYxX9q5nmnuMa1xmvhkamOJGkVoDNrDoWVuHQ6ZFPGPeTJTCVigrQXOcoKniwmrkZyiFrg1chn0O0rfoi7_Rycfu6RwjgT73m-Tnf4lq60O8_gIhMrDjX-aCsKe7vI8MKMTyypijJTP6m19P5n0nzCP03RgTaRa-i_zztsWxy3cPPMLnbv0KiagmsuiXhvTv6Idp7OWkdMK6inBqTm3c6xdhRH5Qz6NvDcbiHPOJl68bvDdtDleZO9Xe_Ijw1Z29oOfRWyOqSEtNRc0nhmCXCDhwAy11gM067l_Wtfz2JwjxgthxW1oRgP29IvHig"
+LWA_REFRESH_TOKEN = "Atzr|IwEBIB8BOjVaAouBA6Nj_ZImCwWr9HdUDLKF2TONnTOaGS1VRvXwW1TjLHe5l3ZRub1gSjRDBg3fYSeqJAVENFF9Ehb7EY-t-mqblkmHX6DiUykKUOSFTdwghwgjMeuzRsaKjrrRSgjk2ucab5D1P2knb9vHnoUxyi_QJRnN7L1C9U0EZdkm7QLaVuWYSxfyt0dMuzYQBnbSuRfRR0ynUE1nHNpVcKG6c8TS78Acusqram9x7ZNtWvaAkuyl1rsePhiz7kLJAHGgMkvFVSt30gjkWu2m4xvuxAoMyNC7s3_KxqL0y8UHWMwg8jKivjQwE7ZHOqU"
 AWS_API_KEY_NAME = "spapi-user-at-927374824677"
 Access_key_ID = "AKIA5P26Y2TS44JJFSVX"
 AWS_API_KEY = "ABSKc3BhcGktdXNlci1hdC05MjczNzQ4MjQ2Nzc6QnlqVnRvVklYZUQya21qUmYza0g3TGJ3Q1ZHUzFOdU9IdGd4UWJhRktmM1hzbEJSOTZncDFpRzkwZkk9"
