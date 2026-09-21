@@ -22,12 +22,30 @@ class ConverterThread(QThread):
             self.progress.emit("Processing data...")
             rows = []
             for product, items in data.items():
+                if not isinstance(items, list):
+                    items = [items]
+
                 for item in items:
-                    rows.append({
-                        "Product Name": product,
-                        "ASIN": item.get("productASIN", ""),
-                        "Status": item.get("status", "")
-                    })
+                    if isinstance(item, dict):
+                        row = {
+                            "Product Name": product,
+                            "ASIN": item.get("productASIN", ""),
+                            "Status": item.get("status", "")
+                        }
+                    elif isinstance(item, str):
+                        row = {
+                            "Product Name": product,
+                            "ASIN": "",
+                            "Status": item
+                        }
+                    else:
+                        row = {
+                            "Product Name": product,
+                            "ASIN": "",
+                            "Status": str(item)
+                        }
+
+                    rows.append(row)
 
             df = pd.DataFrame(rows)
 

@@ -39,8 +39,10 @@ from .marketplaces import Marketplace, Region, resolve_marketplace
 from .sections import (
     CatalogItemsAPI,
     FBAInventoryAPI,
+    ProductFeesAPI,
     FeedsAPI,
     ListingsItemsAPI,
+    ListingsRestrictionsAPI,
     OrdersAPI,
     ProductPricingAPI,
     ProductTypeDefinitionsAPI,
@@ -88,8 +90,10 @@ class AmazonSPAPI:
         self.orders = OrdersAPI(self.client)
         self.inventory = FBAInventoryAPI(self.client)
         self.listings = ListingsItemsAPI(self.client)
+        self.restrictions = ListingsRestrictionsAPI(self.client)
         self.catalog = CatalogItemsAPI(self.client)
         self.pricing = ProductPricingAPI(self.client)
+        self.fees = ProductFeesAPI(self.client)
         self.product_types = ProductTypeDefinitionsAPI(self.client)
         self.reports = ReportsAPI(self.client)
         self.feeds = FeedsAPI(self.client)

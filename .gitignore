@@ -17,3 +17,13 @@ build/
 
 screenshots/
 videos/
+*.xlsx
+*.csv
+JSON FILES/
+asinsdata-part1.json
+fix_raw_strings.py
+asinsdata.json
+fixed_strings.json
+resultData_part1.json
+resultData.json
+*asinsdata.json

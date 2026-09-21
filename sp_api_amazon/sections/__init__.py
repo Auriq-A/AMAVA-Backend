@@ -7,12 +7,14 @@ and wire it into AmazonSPAPI.__init__.
 from .base import BaseSection
 from .catalog import CatalogItemsAPI
 from .fba_inventory import FBAInventoryAPI
+from .fees import ProductFeesAPI
 from .feeds import FeedsAPI
 from .listings import ListingsItemsAPI
 from .orders import OrdersAPI
 from .pricing import ProductPricingAPI
 from .product_types import ProductTypeDefinitionsAPI
 from .reports import ReportsAPI
+from .restrictions import ListingsRestrictionsAPI
 from .sales import SalesAPI
 from .sellers import SellersAPI
 from .tokens import TokensAPI
@@ -21,8 +23,10 @@ __all__ = [
     "BaseSection",
     "CatalogItemsAPI",
     "FBAInventoryAPI",
+    "ProductFeesAPI",
     "FeedsAPI",
     "ListingsItemsAPI",
+    "ListingsRestrictionsAPI",
     "OrdersAPI",
     "ProductPricingAPI",
     "ProductTypeDefinitionsAPI",

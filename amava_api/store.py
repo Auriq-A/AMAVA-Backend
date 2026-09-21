@@ -43,6 +43,8 @@ class AppStateStore:
     SCRAPED = "scraped"        # {"raw_string", "items_count", "saved_at"}
     CHECKED = "checked"        # {"results", "skipped", "timestamp", "unit"}
     SEARCH_KEY = "search_key"  # {"data", "unit", "saved_at"}
+    AMAZON_STATUS = "amazon_check_status"
+    FBA_RESULTS = "fba_profit_results"
 
     def __init__(self, session) -> None:
         self.s = session

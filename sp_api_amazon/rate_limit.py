@@ -46,11 +46,15 @@ DEFAULT_RATES: dict[str, RateConfig] = {
     "putListingsItem": RateConfig(5.0, 10),
     "patchListingsItem": RateConfig(5.0, 10),
     "deleteListingsItem": RateConfig(5.0, 10),
+    # Listings Restrictions
+    "getListingsRestrictions": RateConfig(5.0, 10),
     # Product Pricing
     "getPricing": RateConfig(0.5, 1),
     "getCompetitivePricing": RateConfig(0.5, 1),
     "getItemOffers": RateConfig(0.5, 1),
     "getListingOffers": RateConfig(0.5, 1),
+    # Product Fees
+    "getMyFeesEstimateForASIN": RateConfig(1.0, 2),
     # Product Type Definitions
     "searchDefinitionsProductTypes": RateConfig(5.0, 10),
     "getDefinitionsProductType": RateConfig(5.0, 10),

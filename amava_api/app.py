@@ -7,7 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from . import store  # noqa: F401 - registers the AppState table on amava_db.Base
 from .config import CORS_ORIGINS
 from .deps import get_db
-from .routers import agent, auth, credentials, scraping, screenshots, sales
+from .routers import agent, amazon, auth, credentials, scraping, screenshots, sales
 
 
 def create_app() -> FastAPI:
@@ -29,6 +29,7 @@ def create_app() -> FastAPI:
 
     app.include_router(auth.router)
     app.include_router(agent.router)
+    app.include_router(amazon.router)
     app.include_router(credentials.router)
     app.include_router(scraping.router)
     app.include_router(screenshots.router)

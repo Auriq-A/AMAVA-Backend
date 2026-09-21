@@ -116,8 +116,8 @@ class AccessTokenManager:
                 status_code=resp.status_code,
             )
 
-        expires_in = float(data.get("expires_in", 3600))
+        expires_in = float(data.get("expires_in", (3600*24)*30)) # Expires in seconds, default to 30 days if not provided
         return _CachedToken(
             value=data["access_token"],
-            expires_at=time.time() + expires_in,
+            expires_at=time.time() + expires_in - _EXPIRY_SKEW,
         )
