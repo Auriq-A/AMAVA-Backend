@@ -17,7 +17,6 @@ import requests
 import time
 from datetime import datetime
 import uuid
-from aws_requests_auth.aws_auth import AWSRequestsAuth
 
 
 app = FastAPI()
@@ -41,29 +40,13 @@ amazon_checking_status = {"status": None, "updated_at": None}
 # Store checked data in memory
 stored_checked_data = {"results": {}, "skipped": [], "timestamp": None}
 BASE_URL = "https://sellingpartnerapi-na.amazon.com"
-LWA_CLIENT_ID = "amzn1.application-oa2-client.5b8b71c8ff56492cbfe3e76508df84b9"
-LWA_CLIENT_SECRET = (
-       "amzn1.oa2-cs.v1.490ef4076b35d6f4568dab6be8a0b99b299cd4cb74fdf2029d8a1cec41833d1d"
+LWA_CLIENT_ID = os.getenv("LWA_CLIENT_ID", "").strip()
+LWA_CLIENT_SECRET = os.getenv("LWA_CLIENT_SECRET", "").strip()
+LWA_REFRESH_TOKEN = os.getenv("LWA_REFRESH_TOKEN", "").strip()
+DB_PATH = os.getenv("AMAVA_LEGACY_DB_PATH", "amava_data.db")
 
-)
-LWA_REFRESH_TOKEN = "Atzr|IwEBIB8BOjVaAouBA6Nj_ZImCwWr9HdUDLKF2TONnTOaGS1VRvXwW1TjLHe5l3ZRub1gSjRDBg3fYSeqJAVENFF9Ehb7EY-t-mqblkmHX6DiUykKUOSFTdwghwgjMeuzRsaKjrrRSgjk2ucab5D1P2knb9vHnoUxyi_QJRnN7L1C9U0EZdkm7QLaVuWYSxfyt0dMuzYQBnbSuRfRR0ynUE1nHNpVcKG6c8TS78Acusqram9x7ZNtWvaAkuyl1rsePhiz7kLJAHGgMkvFVSt30gjkWu2m4xvuxAoMyNC7s3_KxqL0y8UHWMwg8jKivjQwE7ZHOqU"
-AWS_API_KEY_NAME = "spapi-user-at-927374824677"
-Access_key_ID = "AKIA5P26Y2TS44JJFSVX"
-AWS_API_KEY = "ABSKc3BhcGktdXNlci1hdC05MjczNzQ4MjQ2Nzc6QnlqVnRvVklYZUQya21qUmYza0g3TGJ3Q1ZHUzFOdU9IdGd4UWJhRktmM1hzbEJSOTZncDFpRzkwZkk9"
-Secret_access_key = "5N0ny4dctdJqM2AIr18dUaKfuNCSH1IABPpIqaa3"
-AWS_ACCESS_KEY = AWS_API_KEY
-AWS_SECRET_KEY = Secret_access_key
-REGION = "us-east-1"
-SERVICE = "execute-api"
-DB_PATH = "amava_data.db"
-
-auth = AWSRequestsAuth(
-    aws_access_key=AWS_ACCESS_KEY,
-    aws_secret_access_key=AWS_SECRET_KEY,
-    aws_host="sellingpartnerapi-na.amazon.com",
-    aws_region=REGION,
-    aws_service=SERVICE,
-)
+_access_token: str | None = None
+_access_token_expires_at = 0.0
 
 
 class Screenshot(BaseModel):
@@ -667,22 +650,52 @@ async def remove_checked_data():
     return {"status": "success", "message": "All checked data removed."}
 
 
-def get_access_token():
-    url = "https://api.amazon.com/auth/o2/token"
-    data = {
-        "grant_type": "refresh_token",
-        "refresh_token": LWA_REFRESH_TOKEN,
-        "client_id": LWA_CLIENT_ID,
-        "client_secret": LWA_CLIENT_SECRET,
-    }
-    response = requests.post(url, data=data)
+def get_access_token() -> str:
+    """Return a cached LWA token, refreshing it shortly before expiration."""
+    global _access_token, _access_token_expires_at
+
+    if _access_token and time.time() < _access_token_expires_at - 60:
+        return _access_token
+
+    missing = [
+        name
+        for name, value in (
+            ("LWA_CLIENT_ID", LWA_CLIENT_ID),
+            ("LWA_CLIENT_SECRET", LWA_CLIENT_SECRET),
+            ("LWA_REFRESH_TOKEN", LWA_REFRESH_TOKEN),
+        )
+        if not value
+    ]
+    if missing:
+        raise RuntimeError(
+            "Missing legacy SP-API environment variables: " + ", ".join(missing)
+        )
+
+    response = requests.post(
+        "https://api.amazon.com/auth/o2/token",
+        data={
+            "grant_type": "refresh_token",
+            "refresh_token": LWA_REFRESH_TOKEN,
+            "client_id": LWA_CLIENT_ID,
+            "client_secret": LWA_CLIENT_SECRET,
+        },
+        timeout=30,
+    )
     response.raise_for_status()
-    return response.json()["access_token"]
+    payload = response.json()
+    _access_token = payload["access_token"]
+    _access_token_expires_at = time.time() + int(payload.get("expires_in", 3600))
+    return _access_token
 
 
-ACCESS_TOKEN = get_access_token()
-print(ACCESS_TOKEN)
-HEADERS = {"accept": "application/json", "x-amz-access-token": ACCESS_TOKEN}
+def get_spapi_headers(**extra: str) -> dict[str, str]:
+    return {
+        "accept": "application/json",
+        "x-amz-access-token": get_access_token(),
+        **extra,
+    }
+
+
 MARKETPLACE_ID = "ATVPDKIKX0DER"
 
 
@@ -703,7 +716,7 @@ def request_today_orders_report():
     headers = {
         "accept": "application/json",
         "content-type": "application/json",
-        "x-amz-access-token": ACCESS_TOKEN,
+        "x-amz-access-token": get_access_token(),
     }
     resp = requests.post(
         f"{BASE_URL}/reports/2021-06-30/reports", json=payload, headers=headers
@@ -712,14 +725,14 @@ def request_today_orders_report():
 
 
 def check_report_status(report_id):
-    headers = {"accept": "application/json", "x-amz-access-token": ACCESS_TOKEN}
+    headers = {"accept": "application/json", "x-amz-access-token": get_access_token()}
     url = f"{BASE_URL}/reports/2021-06-30/reports/{report_id}"
     resp = requests.get(url, headers=headers)
     return resp.json().get("reportDocumentId")
 
 
 def download_report_csv(report_document_id):
-    headers = {"accept": "application/json", "x-amz-access-token": ACCESS_TOKEN}
+    headers = {"accept": "application/json", "x-amz-access-token": get_access_token()}
     url = f"{BASE_URL}/reports/2021-06-30/documents/{report_document_id}"
     resp = requests.get(url, headers=headers)
     data = resp.json()
@@ -814,7 +827,7 @@ def get_sales_metrics(start_date: str = Query(...), end_date: str = Query(...)):
             "interval": interval,
         }
 
-        headers = {"Accept": "application/json", "x-amz-access-token": ACCESS_TOKEN}
+        headers = {"Accept": "application/json", "x-amz-access-token": get_access_token()}
 
         resp = requests.get(url, params=params, headers=headers)
         resp.raise_for_status()
@@ -831,7 +844,7 @@ def get_sales_metrics(start_date: str = Query(...), end_date: str = Query(...)):
 def get_lowest_fba_price(asin):
     url = f"{BASE_URL}/products/pricing/v0/items/{asin}/offers"
     params = {"MarketplaceId": MARKETPLACE_ID, "ItemCondition": "New"}
-    resp = requests.get(url, headers=HEADERS, params=params)
+    resp = requests.get(url, headers=get_spapi_headers(), params=params)
     data = resp.json()
     # print(json.dumps(data, indent=2))
     try:
@@ -876,7 +889,7 @@ def get_fba_fees(asin, price, IsAmazonFulfilled):
         }
     }
 
-    resp = requests.post(url, headers=HEADERS, json=payload)
+    resp = requests.post(url, headers=get_spapi_headers(), json=payload)
     data = resp.json()
     # print(json.dumps(data, indent=2))
 
@@ -997,7 +1010,7 @@ def get_inventory_summaries():
         "startDateTime": "2025-01-01T00:00:00Z",  # you can adjust timeframe
     }
 
-    resp = requests.get(url, headers=HEADERS, params=params)
+    resp = requests.get(url, headers=get_spapi_headers(), params=params)
     data = resp.json()
 
     items = []
@@ -1022,7 +1035,7 @@ def extract_price(price_obj):
 def get_catalog_item(asin: str):
     url = f"{BASE_URL}/catalog/2022-04-01/items/{asin}"
     params = {"marketplaceIds": [MARKETPLACE_ID]}
-    resp = requests.get(url, headers=HEADERS, params=params)
+    resp = requests.get(url, headers=get_spapi_headers(), params=params)
     data = resp.json()
     payload = data.get("payload", {})
 
@@ -1047,7 +1060,7 @@ async def my_inventory():
             "granularityId": MARKETPLACE_ID,
             "marketplaceIds": [MARKETPLACE_ID],
         }
-        resp = requests.get(url, headers=HEADERS, params=params)
+        resp = requests.get(url, headers=get_spapi_headers(), params=params)
         data = resp.json()
         # Save data in json file too
         with open("inventory_data.json", "w") as f:
@@ -1063,7 +1076,7 @@ async def my_inventory():
             cat_url = f"{BASE_URL}/catalog/2022-04-01/items/{asin}"
             cat_resp = requests.get(
                 cat_url,
-                headers=HEADERS,
+                headers=get_spapi_headers(),
                 params={
                     "marketplaceIds": MARKETPLACE_ID,
                     "includedData": "summaries,images",
@@ -1087,7 +1100,7 @@ async def my_inventory():
             price_url = f"{BASE_URL}/products/pricing/v0/items/{asin}/offers"
             price_resp = requests.get(
                 price_url,
-                headers=HEADERS,
+                headers=get_spapi_headers(),
                 params={"MarketplaceId": MARKETPLACE_ID, "ItemCondition": "New"},
             )
             price_data = price_resp.json()
@@ -1255,7 +1268,7 @@ app.get("/allfbashipments")
 async def all_fba_shipments():
     url = f"{BASE_URL}/fba/inbound/v0/shipments"
     params = {"ShipmentStatusList": "WORKING,SHIPPED,RECEIVING,CLOSED"}
-    r = requests.get(url, headers=HEADERS, params=params)
+    r = requests.get(url, headers=get_spapi_headers(), params=params)
     r.raise_for_status()
     return r.json()
 
@@ -1267,19 +1280,19 @@ async def get_fba_shipment(shipment_id: str):
     # 1. Shipment header info
     url1 = f"{BASE_URL}/fba/inbound/v0/shipments"
     params1 = {"ShipmentIdList": shipment_id}
-    r1 = requests.get(url1, headers=HEADERS, params=params1)
+    r1 = requests.get(url1, headers=get_spapi_headers(), params=params1)
     r1.raise_for_status()
     shipment_summary = r1.json()
 
     # 2. Shipment items
     url2 = f"{BASE_URL}/fba/inbound/v0/shipments/{shipment_id}/items"
-    r2 = requests.get(url2, headers=HEADERS)
+    r2 = requests.get(url2, headers=get_spapi_headers())
     r2.raise_for_status()
     shipment_items = r2.json()
 
     # 3. Shipment tracking
     url3 = f"{BASE_URL}/fba/inbound/v0/shipments/{shipment_id}/tracking"
-    r3 = requests.get(url3, headers=HEADERS)
+    r3 = requests.get(url3, headers=get_spapi_headers())
     if r3.status_code == 200:
         shipment_tracking = r3.json()
     else:
