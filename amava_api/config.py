@@ -18,7 +18,7 @@ CORS_ORIGINS = _split(os.getenv("AMAVA_CORS_ORIGINS", "*")) or ["*"]
 SCREENSHOT_DIR = os.getenv("AMAVA_SCREENSHOT_DIR", "screenshots")
 
 # Same port the old server.py used, so the existing frontend works unchanged.
-PORT = int(os.getenv("PORT", "51483"))
+PORT = int(os.getenv("PORT", "8000"))
 HOST = os.getenv("HOST", "0.0.0.0")
 
 # Phase 1 is single-tenant-by-default: all requests resolve to this local user
