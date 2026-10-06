@@ -6,6 +6,7 @@ __pycache__/
 .env
 .env.*
 !.env.example
+/extra-tools/AGENT/AMAVAGENT/amztools/credentials.json
 
 node_modules/
 
